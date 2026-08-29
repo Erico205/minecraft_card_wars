@@ -1,0 +1,13 @@
+{
+  "itemGroup.minecardwars": "Example Mod Tab",
+  "block.minecardwars.example_block": "Example Block",
+  "item.minecardwars.example_item": "Example Item",
+
+  "minecardwars.configuration.title": "Minecraft Card Wars Configs",
+  "minecardwars.configuration.section.minecardwars.common.toml": "Minecraft Card Wars Configs",
+  "minecardwars.configuration.section.minecardwars.common.toml.title": "Minecraft Card Wars Configs",
+  "minecardwars.configuration.items": "Item List",
+  "minecardwars.configuration.logDirtBlock": "Log Dirt Block",
+  "minecardwars.configuration.magicNumberIntroduction": "Magic Number Text",
+  "minecardwars.configuration.magicNumber": "Magic Number"
+}
