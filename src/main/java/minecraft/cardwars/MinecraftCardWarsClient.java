@@ -1,3 +1,6 @@
+
+
+
 package minecraft.cardwars;
 
 import net.minecraft.client.Minecraft;
@@ -14,6 +17,8 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 @Mod(value = MinecraftCardWars.MODID, dist = Dist.CLIENT)
 // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
 @EventBusSubscriber(modid = MinecraftCardWars.MODID, value = Dist.CLIENT)
+
+// Classe importada pelo NeoForge, ainda não olhei ela então não sei o que faz
 public class MinecraftCardWarsClient {
     public MinecraftCardWarsClient(ModContainer container) {
         // Allows NeoForge to create a config screen for this mod's configs.

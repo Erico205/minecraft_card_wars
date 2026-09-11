@@ -1,6 +1,9 @@
+// Classe principal
+
 package minecraft.cardwars;
 
-import minecraft.cardwars.cards.Card;
+import minecraft.cardwars.cards.CardRegistry;
+import minecraft.cardwars.cards.ChickenCard;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -38,7 +41,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class MinecraftCardWars {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "minecardwars";
-    // Directly reference a slf4j logger
+    // Directly reference a logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "minecardwars" namespace
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
@@ -83,7 +86,7 @@ public class MinecraftCardWars {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        Card.register(modEventBus);
+        CardRegistry.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -108,7 +111,7 @@ public class MinecraftCardWars {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(Card.CARD);
+            event.accept(CardRegistry.CHICKEN_CARD.get());
         }
     }
 
